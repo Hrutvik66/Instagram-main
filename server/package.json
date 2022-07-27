@@ -24,8 +24,7 @@
   "scripts": {
     "start": "node server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm start\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "author": "HSM",
   "license": "ISC"
