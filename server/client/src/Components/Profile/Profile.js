@@ -26,7 +26,7 @@ const Profile = () => {
   const History = useNavigate();
 
   async function fetchData() {
-    const res = await axios.get("http://localhost:3001/Profile");
+    const res = await axios.get("/Profile");
     setUserData(res.data);
     setPosts(res.data.posts);
   }
@@ -45,7 +45,7 @@ const Profile = () => {
       console.log(event.target.files[0]);
       const data = new FormData();
       data.append("file", event.target.files[0]);
-      const res = await axios.post("http://localhost:3001/Profile", data);
+      const res = await axios.post("/Profile", data);
       // then print response status
       if (res.status !== 500) {
         window.location.reload();
@@ -95,7 +95,7 @@ const Profile = () => {
               </label>
               <input id="file" type="file" onChange={Update} />
               <img
-                src={`http://localhost:3001/ProfileImages/${userData.profile}`}
+                src={`/ProfileImages/${userData.profile}`}
                 alt="profile"
                 id="output"
                 width="200"
@@ -159,7 +159,7 @@ const Profile = () => {
                   <div id={index}>
                     <img
                       className="Post-style"
-                      src={`http://localhost:3001/inProcessImages/${post.image}`}
+                      src={`/inProcessImages/${post.image}`}
                       alt="posts"
                     />
                   </div>
@@ -210,7 +210,7 @@ const Profile = () => {
                           <ListItemAvatar>
                             <Avatar
                               alt="Remy Sharp"
-                              src={`http://localhost:3001/ProfileImages/${user.profile}`}
+                              src={`/ProfileImages/${user.profile}`}
                             />
                           </ListItemAvatar>
                           <ListItemText
@@ -269,7 +269,7 @@ const Profile = () => {
                           <ListItemAvatar>
                             <Avatar
                               alt="Remy Sharp"
-                              src={`http://localhost:3001/ProfileImages/${user.profile}`}
+                              src={`/ProfileImages/${user.profile}`}
                             />
                           </ListItemAvatar>
                           <ListItemText

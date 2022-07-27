@@ -60,7 +60,7 @@ const PostComp = ({ key, post }) => {
           <header>
             <img
               className="profile-image"
-              src={`http://localhost:3001/ProfileImages/${user.profile}`}
+              src={`/ProfileImages/${user.profile}`}
               alt="Profile"
             />
             <div className="username-info">
@@ -77,7 +77,7 @@ const PostComp = ({ key, post }) => {
           <div>
             <img
               className="post-image"
-              src={`http://localhost:3001/inProcessImages/${image}`}
+              src={`/inProcessImages/${image}`}
               alt="post"
             />
           </div>

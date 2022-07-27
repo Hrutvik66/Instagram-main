@@ -9,7 +9,7 @@ const Suggestions = ({ fetchPosts }) => {
   const [suggestions, setsuggestions] = useState([]);
 
   async function fetchSuggestions() {
-    const res = await axios.get("http://localhost:3001/suggestions");
+    const res = await axios.get("/suggestions");
     setsuggestions(res.data);
     fetchPosts();
   }

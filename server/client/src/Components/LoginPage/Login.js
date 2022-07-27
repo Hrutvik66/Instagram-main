@@ -80,7 +80,7 @@ const Login = () => {
       }));
 
       if (checkEmail(email) && checkPassword(password)) {
-        const res = await axios.post("http://localhost:3001/", {
+        const res = await axios.post("/", {
           email: email,
           password: password,
         });

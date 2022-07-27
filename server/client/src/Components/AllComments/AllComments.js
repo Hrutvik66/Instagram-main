@@ -54,7 +54,7 @@ const AllComments = () => {
                 <ListItemAvatar>
                   <Avatar
                     alt="Remy Sharp"
-                    src={`http://localhost:3001/ProfileImages/default-avatar.jpg}`}
+                    src={`/ProfileImages/default-avatar.jpg}`}
                   />
                 </ListItemAvatar>
                 <ListItemText
@@ -66,7 +66,7 @@ const AllComments = () => {
               </ListItem>
               <img
                 className="post-image"
-                src={`http://localhost:3001/inProcessImages/${postData.image}`}
+                src={`/inProcessImages/${postData.image}`}
                 alt="post"
               />
             </Box>
@@ -87,7 +87,7 @@ const AllComments = () => {
                       <ListItemAvatar>
                         <Avatar
                           alt="Remy Sharp"
-                          src={`http://localhost:3001/ProfileImages/${comm.user.profile}`}
+                          src={`/ProfileImages/${comm.user.profile}`}
                         />
                       </ListItemAvatar>
                       <ListItemText

@@ -14,12 +14,12 @@ const Home = () => {
   const History = useNavigate();
 
   async function fetchPosts() {
-    const res = await axios.get("http://localhost:3001/fetchpost");
+    const res = await axios.get("/fetchpost");
     setPosts(res.data);
   }
 
   async function fetchData() {
-    const res = await axios.get("http://localhost:3001/Profile");
+    const res = await axios.get("/Profile");
     setUserData(res.data);
   }
 

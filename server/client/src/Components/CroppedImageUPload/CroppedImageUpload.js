@@ -22,7 +22,7 @@ const CroppedImageUpload = () => {
   useEffect(() => {
     try {
       async function fetchData() {
-        const res = await axios.get("http://localhost:3001/Profile");
+        const res = await axios.get("/Profile");
         setUserData(res.data);
       }
       fetchData();
@@ -130,7 +130,7 @@ const CroppedImageUpload = () => {
       formData.append("file", file);
       formData.append("caption", caption);
       console.log(formData);
-      const res = axios.post("http://localhost:3001/selectImage", formData);
+      const res = axios.post("/selectImage", formData);
       if (res.status !== 500) {
         History("/home");
       }

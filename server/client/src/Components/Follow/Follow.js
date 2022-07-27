@@ -5,7 +5,7 @@ import "./style.css";
 function Follow({ key, suggestion, fetchSuggestions }) {
   const addFollowing = async () => {
     try {
-      await axios.post("http://localhost:3001/following", {
+      await axios.post("/following", {
         _id: suggestion._id,
         userName: suggestion.userName,
       });
@@ -20,7 +20,7 @@ function Follow({ key, suggestion, fetchSuggestions }) {
       <div className="left-container">
         <img
           className="profile-image"
-          src={`http://localhost:3001/ProfileImages/${suggestion.profile}`}
+          src={`/ProfileImages/${suggestion.profile}`}
           alt="Profile"
         />
         <div>{suggestion.userName}</div>

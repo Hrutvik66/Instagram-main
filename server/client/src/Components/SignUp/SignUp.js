@@ -132,7 +132,7 @@ const SignUp = () => {
         checkPassword(userInfo.password) &&
         checkConfirmPassword(userInfo.password, userInfo.confPassword)
       ) {
-        res = await axios.post("http://localhost:3001/Signup", {
+        res = await axios.post("/Signup", {
           userName: userInfo.userName,
           email: userInfo.email,
           password: userInfo.password,

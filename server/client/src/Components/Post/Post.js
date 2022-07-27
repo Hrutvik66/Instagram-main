@@ -13,7 +13,7 @@ function Post() {
   useEffect(() => {
     try {
       async function fetchData() {
-        const res = await axios.get("http://localhost:3001/Profile");
+        const res = await axios.get("/Profile");
         setUserData(res.data);
       }
       fetchData();
